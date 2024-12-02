@@ -1,0 +1,344 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0); /* Transparent header background */
+    padding: 20px; /* Padding inside the first section */
+    margin-bottom: 40px; /* Margin at the bottom of the first section */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.overview-btn {
+    padding: 10px 20px;
+    background-color: #5f885d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overview-btn:hover {
+    background-color: #4a7049;
+}
+
+.phone-number {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Main Background */
+.background-image {
+    background: url('images/background-image.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    align-items: left;
+    display: flex;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better visibility of content */
+    z-index: 1;
+}
+
+.form-container {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+form .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+form .input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5f885d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #4a7049;
+}
+
+.second-session {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding: 20px; /* Padding inside the second section */
+    margin-top: 40px; /* Margin at the top of the second section to push it down */
+}
+
+.part-one {
+    width: 30%;
+}
+
+.small-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.part-two {
+    width: 65%;
+}
+
+.logos-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.logos-list li {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 80px;
+    height: auto;
+    padding-right: 15px;
+
+}
+
+.small-image{
+    height: 500px;
+}
+
+.text-part-two{
+    padding-top: 50px;
+    margin-top: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.logos-list{
+    padding-top: 20px;
+}
+.srpl{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50px;
+    width: 100px;
+}
+
+.third-session-h4{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #433b3b;
+}
+
+.privacy{
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: solid;
+}
+
+.content-third{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.rights{
+    padding-top: 10px;
+    text-align: center;
+    color: #856f6f;
+
+}
+.button-enquery{
+    background-color: #4a7049;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    /* For tablets and medium screens */
+    .second-session {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part-one, .part-two {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logos-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-container {
+        width: 80%;
+        right: 10%;
+        top: 10%;
+    }
+
+    /* Make the header background white */
+    .header {
+        background-color: white;
+    }
+    .logo img{
+        content:url("images/black_logo.png");
+    }
+
+    .overview-btn{
+        display: none;
+    }
+
+    .phone-number{
+        padding: 10px 20px;
+        background-color: #5f885d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    /* On smaller screens, move the form below the cover image */
+    .cover-container {
+        height: auto; /* Remove full viewport height */
+    }
+
+    .form-container {
+        position: static;
+        transform: none;
+        margin: 20px auto; /* Center the form below the image */
+        width: 90%; /* Form takes more width */
+        max-width: 600px; /* Maximum width for the form */
+    }
+
+    .cover-image {
+        object-fit: cover;
+        height: 50vh; /* Reduce the height of the image on small screens */
+    }
+    /* For small screens and mobiles */
+    .background-image {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logos-list {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        max-width: 60px;
+    }
+
+    .logo img{
+        content:url("images/black_logo.png");
+    }
+    .third-session-h4,
+    .privacy,
+    .rights {
+        font-size: 0.9rem;
+    }
+
+    /* Move the form to the next section on small screens */
+    .background-image + .second-session {
+        margin-top: 40px;
+    }
+    .background-image{
+        background: url('images/bimage.png');
+    }
+    /* Make the header background white on small screens */
+    .header {
+        background-color: white;
+    }
+    .overview-btn{
+        display: none;
+    }
+    .phone-number{
+        padding: 10px 20px;
+        background-color: #5f885d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
